@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/shared/ui/utils";
+import Header from "@/widgets/header";
+import PageTransition from "@/widgets/page-transition";
 
-const fontSans = FontSans({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-sans",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-jetbrainsMono",
 });
 
 export const metadata: Metadata = {
@@ -23,10 +26,11 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
+          jetbrainsMono.variable,
         )}
       >
-        {children}
+        <Header />
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );

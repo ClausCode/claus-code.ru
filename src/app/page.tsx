@@ -1,9 +1,3 @@
-import { Button } from "@/shared/ui/button";
-
-export default function Home() {
-  return (
-    <>
-      <Button>Кнопка</Button>
-    </>
-  );
+export default async function Home() {
+  return <main>Кнопка</main>;
 }
