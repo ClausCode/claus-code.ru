@@ -3,6 +3,7 @@ import { FiDownload } from "react-icons/fi";
 import React from "react";
 import Social from "@/widgets/social";
 import Photo from "@/widgets/photo";
+import Stats from "@/widgets/stats";
 
 const Home = () => {
   return (
@@ -43,11 +44,12 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="order-1 xl:order-none">
+          <div className="order-1 xl:order-none mb-8 xl:mb-0">
             <Photo />
           </div>
         </div>
       </div>
+      <Stats />
     </section>
   );
 };

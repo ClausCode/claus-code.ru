@@ -6,20 +6,13 @@ import Image from "next/image";
 
 const Photo = () => {
   return (
-    <motion.div
-      className="w-full h-full relative"
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { delay: 2, duration: 0.4, ease: "easeIn" },
-      }}
-    >
+    <div>
       {/* Image */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
+          transition: { delay: 2, duration: 0.4, ease: "easeInOut" },
         }}
       >
         <div className="size-[298px] xl:size-[498px] mix-blend-lighten absolute">
@@ -61,7 +54,7 @@ const Photo = () => {
           }}
         />
       </motion.svg>
-    </motion.div>
+    </div>
   );
 };
 
